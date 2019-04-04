@@ -1539,6 +1539,6 @@ Running on: Windows 10 or greater
 Brought to you by TDD v2.11.0, Mar 26 2018, 09:54:50
 ```
 
-## VC 架构
+## VC架构
 
 OUTPUT_TERMINAL(bSourceID = 4) <-- EXTENSION_UNIT(bUnitID = 4, baSourceID = 3) <-- PROCESSING_UNIT(bUnitID = 3, bSourceID = 1) <-- INPUT_TERMINAL(bTerminalID = 1)
