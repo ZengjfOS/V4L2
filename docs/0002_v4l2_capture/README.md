@@ -7,6 +7,7 @@
 * [yuyv图像转rgb后转bmp的一个简单demo](https://blog.csdn.net/dancer__sky/article/details/76724292)
 * https://gist.github.com/piec/8791163
 * [v4l2的学习建议和流程解析](https://www.cnblogs.com/silence-hust/p/4464291.html)
+* [基于V4l2的USB摄像头视频采集原理](http://wentao1213.com/2016/11/25/linux-v4l2-usb/)
 
 ## 简要说明
 
