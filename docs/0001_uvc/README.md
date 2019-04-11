@@ -12,6 +12,7 @@
 
 ## 笔记文档
 
+* [0006_uvc_scan_device.md](0006_uvc_scan_device.md)：将Unit/Terminal和Chain绑定起来；
 * [0005_uvc_ctrl_init_device.md](0005_uvc_ctrl_init_device.md)：将VC中描述符中的控制位解析成系统控制控件；
 * [0004_uvc_parse_streaming.md](0004_uvc_parse_streaming.md)：VS信息放在`struct uvc_device`的streams链表；
 * [0003_uvc_probe_Parse_IAD_Interface.md](0003_uvc_probe_Parse_IAD_Interface.md)：IAD信息是如何被解析的，VC/VS信息如何被获知的，VC Terminal/Unit信息放在`struct uvc_device`的entities链表；
