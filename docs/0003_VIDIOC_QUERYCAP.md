@@ -11,6 +11,8 @@
 
 ## 设备节点映射函数
 
+对设备节点进行操作的时候，基本上是对以下函数进行映射操作；
+
 ```C
 static const struct v4l2_ioctl_ops mxc_isi_capture_ioctl_ops = {
 	.vidioc_querycap		= mxc_isi_cap_querycap,

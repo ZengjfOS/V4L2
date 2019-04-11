@@ -29,7 +29,7 @@ int main() {
 		perror("ioctl VIDIOC_QUERYCAP"); 
 		close(fd); 
 	} 
-	if (cap.capabilities & V4L2_CAP_VIDEO_CAPTURE) { 
+	if (cap.capabilities & V4L2_CAP_VIDEO_CAPTURE_MPLANE) { 
 		/* 如果为摄像头设备则打印摄像头驱动名字 */ 
 		printf("Driver Name: %s\n", cap.driver); 
 	} else { 
@@ -50,9 +50,10 @@ int main() {
 		close(fd); 
 		return -2; 
 	} 
+
 	/* 查询摄像头可捕捉的图片类型，VIDIOC_ENUM_FMT: 枚举摄像头帧格式 */ 
 	struct v4l2_fmtdesc fmt; 
-	fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE; 					// 指定需要枚举的类型 
+	fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE; 					// 指定需要枚举的类型 
 	for (i = 0; ; i++) // 有可能摄像头支持的图片格式不止一种 
 	{ 
 		fmt.index = i; 
@@ -63,21 +64,24 @@ int main() {
 		} 
 		/* 打印摄像头图片格式 */ 
 		printf("Picture Format: %s\n", fmt.description); 
-		/* 查询该图像格式所支持的分辨率 */ 
-		struct v4l2_frmsizeenum frmsize; frmsize.pixel_format = fmt.pixelformat; 
-		for (i = 0; ; i++) //　该格式支持分辨率不止一种 
-		{ 
-			frmsize.index = i; 
-			ret = ioctl(fd, VIDIOC_ENUM_FRAMESIZES, &frmsize); 
-			if (-1 == ret) 
-			// 获取所有图片分辨率完成 
-			{ 
-				break; 
-			} 
-			/* 打印图片分辨率 */ 
-			printf("width: %d height: %d\n", frmsize.discrete.width,frmsize.discrete.height); 
-		} 
 	} 
+
+    /* 查询该图像格式所支持的分辨率 */ 
+    struct v4l2_frmsizeenum frmsize; frmsize.pixel_format = fmt.pixelformat; 
+    int j = 0;
+    for (j = 0; ; j++) //　该格式支持分辨率不止一种 
+    { 
+        frmsize.index = j; 
+        ret = ioctl(fd, VIDIOC_ENUM_FRAMESIZES, &frmsize); 
+        if (-1 == ret) 
+        // 获取所有图片分辨率完成 
+        { 
+            break; 
+        } 
+        /* 打印图片分辨率 */ 
+        printf("width: %d height: %d\n", frmsize.discrete.width,frmsize.discrete.height); 
+    } 
+
 	close(fd); // 不要忘记关闭打开的设备 
 	return 0; 
 }
