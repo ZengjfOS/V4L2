@@ -4,6 +4,7 @@
 
 ## 笔记文档
 
+* [0012_Stream_ON_hack.md](docs/0012_Stream_ON_hack.md)：Stream ON函数处理流程；
 * [0011_Android_cmd_tools_for_mplanar](docs/0011_Android_cmd_tools_for_mplanar)：Android命令行工具；
 * [0010_VIDIOC_REQBUFS.md](docs/0010_VIDIOC_REQBUFS.md)：ioctl VIDIOC_REQBUFS是如何工作的；
 * [0009_vb2_callback.md](docs/0009_vb2_callback.md)：vb2和v4l2的buffer区别在哪里？
