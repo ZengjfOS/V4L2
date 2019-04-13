@@ -4,6 +4,9 @@
 
 ## 笔记文档
 
+* [0015_Surround_View.md](docs/0015_Surround_View.md)：NXP环视示例；
+* [0014_Framebuffer_Show_Image](docs/0014_Framebuffer_Show_Image/README.md)：Android Framebuffer显示图片；
+* [0013_screencap.md](docs/0013_screencap.md)：Android获取Frambuffer屏幕截图；
 * [0012_Stream_ON_hack.md](docs/0012_Stream_ON_hack.md)：Stream ON函数处理流程；
 * [0011_Android_cmd_tools_for_mplanar](docs/0011_Android_cmd_tools_for_mplanar)：Android命令行工具；
 * [0010_VIDIOC_REQBUFS.md](docs/0010_VIDIOC_REQBUFS.md)：ioctl VIDIOC_REQBUFS是如何工作的；
