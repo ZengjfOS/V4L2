@@ -4,7 +4,8 @@
 
 ## 笔记文档
 
-* [0017_OpenGL.md](docs/0017_OpenGL.md)：OpenGL绘图；
+* [0018_OpenCV.md](docs/0018_OpenCV.md)：OpenCV Android SDK；
+* [0017_OpenGL.md](docs/0017_OpenGL.md)：OpenGL Android绘图；
 * [0016_EVS.md](docs/0016_EVS.md)：Google车载环视；
 * [0015_Surround_View.md](docs/0015_Surround_View.md)：NXP环视示例；
 * [0014_Framebuffer_Show_Image](docs/0014_Framebuffer_Show_Image/README.md)：Android Framebuffer显示图片；
